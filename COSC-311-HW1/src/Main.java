@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Main {
@@ -7,11 +8,9 @@ public class Main {
 	public static void main(String[] args) throws FileNotFoundException {
 
 		int [] input = new int[1000];
-		Scanner fin = new Scanner(new File("input.txt"));		
-		
-		int x;
-		int j = 0;
-		int i = 1;
+		Scanner fin = new Scanner(new File("input.txt"));
+		PrintWriter fout = new PrintWriter(new File("output.txt"));		
+		int x, j = 0, i = 1;
 		
 		while(fin.hasNextInt())
 		{
@@ -27,16 +26,20 @@ public class Main {
 				x = input[j-1];
 				input[j-1] = input[j];
 				input[j] = x;
+				
 				j--;
 			}
+			i++;			
+		}		
+		
+		i = 0;
+		while(input[i]!= -1){
+			fout.println(input[i]);
 			i++;
 		}
 		
-		for(i = 0; i < input.length-1; i++)
-			System.out.println(input[i]);
-		
 		fin.close();
+		fout.close();
 		
 	}
-
 }
