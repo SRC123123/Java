@@ -1,5 +1,5 @@
 //Shawn Cummings
-//https://github.com/SRC123123/COSC-311-HW1.git
+//https://github.com/SRC123123/Java/tree/master/COSC-311-HW1
 //COSC 311
 //HW 09/07
 //Fall 2016
