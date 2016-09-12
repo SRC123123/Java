@@ -1,3 +1,9 @@
+//Shawn Cummings
+//https://github.com/SRC123123/COSC-311-HW1.git
+//COSC 311
+//HW 09/07
+//Fall 2016
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
