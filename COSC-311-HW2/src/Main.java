@@ -11,16 +11,16 @@ public class Main {
 	public static void main(String[] args) {
 		int [] deck = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 		boolean [] index = new boolean [deck.length];
-		int curr = 0;
+		int curr = 0, x = 0;
+		
 		Random gen = new Random();		
-		gen.setSeed(System.nanoTime());
+		gen.setSeed(System.nanoTime());		
 		
-		
-		int x =0;
 		while (x < 3)
 		{	
-			while(true){
-			curr = gen.nextInt(9);
+			while(true)
+			{
+				curr = gen.nextInt(deck.length);
 
 				if(index[curr]==false)
 				{
@@ -28,8 +28,7 @@ public class Main {
 					break;					
 				}			
 			}
-			x++;
-			curr = gen.nextInt(9);			
+			x++;			
 		}
 		
 		for(int i = 0; i < deck.length; i++)
