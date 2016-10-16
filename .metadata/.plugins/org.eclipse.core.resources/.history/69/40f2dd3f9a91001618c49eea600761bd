@@ -1,0 +1,47 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String parens;;
+		int num = 0;
+		Scanner
+
+		
+		
+		//remove spaces
+		parens = parens.replaceAll("\\s", "");
+		
+		while(parens.isEmpty() == false)
+		{
+			//Check for unmatched parentheses
+			if (parens.charAt(0) == ')' || parens.charAt(parens.length()-1) == '(')
+			{
+				num = -1;
+				break;
+			}	
+		
+			//Remove first '('
+			parens = parens.substring(1);					
+						
+			if(parens.charAt(0)==')')
+			{
+				parens = parens.substring(1);
+				
+				if(parens.isEmpty())
+					num++;
+			}
+			else if(parens.charAt(parens.length()-1) == ')')
+			{
+				parens = parens.substring(0, (parens.length()-1));
+				num++;				
+			}
+			else
+				break;			
+		}
+		
+		System.out.println(num);
+
+	}
+
+}

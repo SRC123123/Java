@@ -1,0 +1,58 @@
+
+public class MyStack {
+
+	private int data;
+	private Node head;
+	private int max;
+	
+	//Constructor
+	public MyStack()
+	{
+		head = new Node();
+		max =0;
+	}
+
+	//Push method - adding item to top of stack
+	public void push(int data)
+	{
+		//Create new node
+		Node temp = new Node();
+		temp.prev = head;
+		
+		//Shift head
+		head.next = temp;
+		head.data = data;
+		head = temp;
+		
+		//Checks/Updates Max
+		if(data > max)
+			max=data;
+	}
+	
+	//Pop method - removing the item on top of stack (LIFO)
+	public void pop()
+	{
+		head = head.prev;
+		head.next = null;
+	}
+	
+	//Peak method - returns the value of item on top of stack
+	public int peak()
+	{
+		return head.prev.data;
+	}
+	
+	//Max method - returns the largest value in the stack
+	public int max()
+	{
+		return max;
+	}
+	
+	//Node Class - used in creating linked list
+	private class Node {
+		private int data;
+		private Node next;
+		private Node prev;
+	}
+
+}

@@ -17,13 +17,18 @@ public class Alg2 {
 		int n = 10, k = 3, x=0, i = 0, curr;
 		long time;	
 		
+		//Random Generator
 		Random gen = new Random();		
 		gen.setSeed(System.nanoTime());
+		
+		//Open File
 		Scanner fin = new Scanner(new File("input.txt"));
 
+		//Output Header
 		String date = new SimpleDateFormat("MM-dd-yyyy").format(new Date());
 		System.out.println("Algorithm 2 \n" + date + "\n");
 
+		//Input Loop and Algorithm Timing
 		while(fin.hasNext())		
 		{
 			//Importing K and N
@@ -52,6 +57,9 @@ public class Alg2 {
 			System.out.println("("+ n + ", " + k + "): " + time);
 						
 		}
+		
+		//Close File
+		fin.close();
 		
 		//Sanity Check
 		for(i = 0; i < 5; i++)		

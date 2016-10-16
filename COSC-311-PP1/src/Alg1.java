@@ -19,15 +19,21 @@ public class Alg1 {
 		int [] array;
 		boolean cont = true;
 		
+		//Random Generator
 		Random gen = new Random();		
 		gen.setSeed(System.nanoTime());
+		
+		//Open File
 		Scanner fin = new Scanner(new File("input.txt"));
 		
+		//Output Header
 		String date = new SimpleDateFormat("MM-dd-yyyy").format(new Date());
 		System.out.println("Algorithm 1 \n" + date + "\n");
 
+		//Input Loop and Algorithm Timing
 		while(fin.hasNext())		
 		{
+			//Importing K and N
 			k = fin.nextInt();
 			n = fin.nextInt();
 			array = new int [k];
@@ -59,7 +65,7 @@ public class Alg1 {
 						}
 					}
 					
-					//Check if duplicates found
+					//Check if duplicates found, if found break from 'for' loop
 					if(cont==true)
 					{						
 						break;
@@ -71,6 +77,9 @@ public class Alg1 {
 			time = System.nanoTime() - time;
 			System.out.println("("+ n + ", " + k + "): " + time);
 		}
+		
+		//Close File
+		fin.close();
 		
 		//Sanity Check
 		array = new int [5];		
@@ -116,8 +125,7 @@ public class Alg1 {
 					for(int x = 0; x < 5; x++)
 						System.out.print(array[x] + ", ");	
 			}			
-		}
-		
+		}		
 	}
 }
 

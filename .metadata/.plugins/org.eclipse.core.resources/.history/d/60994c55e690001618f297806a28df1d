@@ -1,0 +1,37 @@
+
+public class MyStack {
+
+	private int data;
+	private Node head;
+	
+	public MyStack()
+	{
+		head = new Node();	
+	}
+	
+	public void push(int data)
+	{
+		Node temp = new Node();
+		temp.prev = head;
+		head.next = temp;
+		head.data = data;
+		head = temp;	
+	}
+	
+	public void pop()
+	{
+		head.prev.next = null;
+	}
+	
+	public int peak()
+	{
+		return head.prev.data;
+	}
+	
+	private class Node {
+		private int data;
+		private Node next;
+		private Node prev;
+	}
+
+}

@@ -1,0 +1,32 @@
+
+public class MyStack {
+	
+	private Integer data;
+	private MyStack next;
+	private MyStack prev;
+	
+	public void push(int data)
+	{
+		this.data = data;
+		if(this.prev != null)
+			this.prev.next = next;
+		else
+			this.prev = null;
+		
+		if(this.next!=null)
+			this.next.prev = prev;
+		else
+			this.next=next;
+	}
+	
+	public void pop()
+	{
+		this.prev.next=null;
+	}
+	
+	public int peak()
+	{
+		return this.data;
+	}
+
+}

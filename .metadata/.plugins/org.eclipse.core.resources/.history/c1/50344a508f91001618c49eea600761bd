@@ -1,0 +1,39 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String parens = "(()";
+		int stacks = 0;
+		
+		for(int i = 0; i < parens.length(); i++)
+		{
+			if (parens.charAt(0) == ')' || parens.charAt(parens.length()-1) == '(')
+			{
+				stacks = -1;
+				break;
+			}
+			
+			if(parens.charAt(0)== '(')
+			{
+				stacks += 0.5;
+				parens = parens.substring(1);
+			}
+			else
+				break;
+			
+						
+			if(parens.charAt(parens.length()-1) == ')')
+			{
+				stacks += 0.5;
+				parens = parens.substring(0, (parens.length()-1));
+			}
+			else
+				break;
+		}
+		
+		System.out.println(stacks);
+
+	}
+
+}

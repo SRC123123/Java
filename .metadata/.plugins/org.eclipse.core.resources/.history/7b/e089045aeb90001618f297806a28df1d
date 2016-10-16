@@ -1,0 +1,19 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		MyStack stack = new MyStack();
+		stack.push(10);
+		stack.push(11);
+		stack.push(100);
+		stack.push(25);
+		stack.push(111);
+		System.out.println(stack.max());
+		stack.pop();
+		System.out.println(stack.max());
+		
+
+	}
+
+}

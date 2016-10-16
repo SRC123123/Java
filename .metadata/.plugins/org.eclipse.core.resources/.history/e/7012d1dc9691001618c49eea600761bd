@@ -1,0 +1,46 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String parens = "( ( ()() ) )";
+		int stacks = 0;
+		
+		MyStack stack = new MyStack;
+		
+		//remove spaces
+		parens = parens.replaceAll("\\s", "");
+		
+		while(parens.isEmpty() == false)
+		{
+			//Check for unmatched parentheses
+			if (parens.charAt(0) == ')' || parens.charAt(parens.length()-1) == '(')
+			{
+				stacks = -1;
+				break;
+			}	
+		
+			//Remove first '('
+			parens = parens.substring(1);					
+						
+			if(parens.charAt(0)==')')
+			{
+				parens = parens.substring(1);
+				
+				if(parens.isEmpty())
+					stacks++;
+			}
+			else if(parens.charAt(parens.length()-1) == ')')
+			{
+				parens = parens.substring(0, (parens.length()-1));
+				stacks++;				
+			}
+			else
+				break;			
+		}
+		
+		System.out.println(stacks);
+
+	}
+
+}
