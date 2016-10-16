@@ -1,8 +1,3 @@
-//Shawn Cummings
-//http://tinyurl.com/h8bqnhl
-//COSC 311
-//HW 10/17
-//Fall 2016
 
 public class MyStack {
 
@@ -58,7 +53,7 @@ public class MyStack {
 		max = head;
 		Node temp = max.prev;
 		
-		while(temp.prev != null)
+		while(max.prev != null)
 		{			
 			if(max.data < temp.data)
 			{

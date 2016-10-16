@@ -12,6 +12,7 @@ public class Main {
 		
 		stack.push(3);
 		stack.push(5);
+		stack.push(4);
 		
 		System.out.println(stack.max()); //max == 5
 		

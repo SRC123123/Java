@@ -58,7 +58,7 @@ public class MyStack {
 		max = head;
 		Node temp = max.prev;
 		
-		while(temp.prev != null)
+		while(max.prev != null)
 		{			
 			if(max.data < temp.data)
 			{
