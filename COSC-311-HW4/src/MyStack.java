@@ -49,7 +49,8 @@ public class MyStack {
 	
 	//Max method - returns the largest value in the stack
 	public int max()
-	{		
+	{	
+		//Checking Linked list
 		if(head.prev == null)
 			return 0;
 		else if(head.prev.prev == null)
@@ -58,6 +59,7 @@ public class MyStack {
 		max = head;
 		Node temp = max.prev;
 		
+		//Searching through linked list for max
 		while(temp.prev != null)
 		{			
 			if(max.data < temp.data)
