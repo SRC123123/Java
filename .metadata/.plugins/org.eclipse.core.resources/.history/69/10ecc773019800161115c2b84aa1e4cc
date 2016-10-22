@@ -1,0 +1,30 @@
+
+public class Main {
+
+	public static void main(String[] args){	
+		
+		Fibonacci fun = new Fibonacci();
+		
+		
+		System.out.println(fun.fibonacci());
+		
+	}	
+}
+
+class Fibonacci{
+	
+	static int [] fib;
+	
+	public Fibonacci(){
+		fib  = new int[100];
+		fib[0] = 1;
+		fib[1] = 1;
+		
+		
+	}
+	
+	int runFib(int n) {
+        if (n <= 1) return n;
+        else return runFib(n-1) + runFib(n-2);
+    }
+}

@@ -1,0 +1,59 @@
+
+public class Main {
+
+	public static void main(String[] args){	
+		
+		Fibonacci fun = new Fibonacci();		
+		long time = 0;
+		
+		time = System.nanoTime();
+		System.out.println(fun.runFib(20));
+		System.out.println((System.nanoTime() - time));
+		
+		time = System.nanoTime();
+		System.out.println(fun.runFib(20));
+		System.out.println((System.nanoTime() - time));
+		
+		System.out.println();
+		fun.printFib();
+		
+		
+		
+	}	
+}
+
+class Fibonacci{
+	
+	static int [] fib;
+	
+	public Fibonacci(){
+		fib  = new int[50];
+		fib[0] = 0;
+		fib[1] = 1;		
+	}
+	
+	private boolean checkTable(int n)
+	{
+		if(n != 0 && fib[n] == 0)
+			return false;
+		
+		return true;
+	}
+	
+	public void printFib()
+	{
+		for(int i = 0; i < fib.length; i ++)
+		{
+			System.out.println(i + ": " + fib[i]);
+		}
+	}
+	
+	int runFib(int n) 
+	{
+		if(n !=0 && fib[n] != 0) return fib[n];
+		
+        if (n <= 1) return n;
+        
+        else return fib[n] =  runFib(n-1) + runFib(n-2);
+    }
+}

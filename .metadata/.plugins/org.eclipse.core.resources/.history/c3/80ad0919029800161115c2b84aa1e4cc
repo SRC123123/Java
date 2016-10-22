@@ -1,0 +1,34 @@
+
+public class Main {
+
+	public static void main(String[] args){	
+		
+		Fibonacci fun = new Fibonacci();
+		int [] test = new int[5];
+		
+		if(test[0] == null)
+		System.out.println(test[0]);
+		
+	}	
+}
+
+class Fibonacci{
+	
+	static int [] fib;
+	
+	public Fibonacci(){
+		fib  = new int[50];
+		fib[0] = 0;
+		fib[1] = 1;		
+	}
+	
+	private int checkTable(int n)
+	{
+		if(fib[n] == )
+	}
+	
+	int runFib(int n) {
+        if (n <= 1) return n;
+        else return runFib(n-1) + runFib(n-2);
+    }
+}
