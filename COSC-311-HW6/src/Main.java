@@ -1,3 +1,8 @@
+//Shawn Cummings
+//http://tinyurl.com/hjj3elu
+//COSC 311
+//HW 10/24
+//Fall 2016
 
 public class Main {
 
@@ -17,13 +22,13 @@ class Fibonacci{
 	
 	public Fibonacci(){
 		fib  = new int[50];
-		fib[0] = 0;
+		fib[0] = 1;
 		fib[1] = 1;		
 	}
 	
 	int runFib(int n) 
 	{
-		if(n !=0 && fib[n] != 0) return fib[n];
+		if(fib[n] != 0) return fib[n];
 		
         if (n <= 1) return n;
         
