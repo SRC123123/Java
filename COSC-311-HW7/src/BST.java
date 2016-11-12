@@ -1,4 +1,5 @@
 //Source code for insert function found at http://tinyurl.com/jhahdkr
+
 public class BST {
 	
 	Node root;
