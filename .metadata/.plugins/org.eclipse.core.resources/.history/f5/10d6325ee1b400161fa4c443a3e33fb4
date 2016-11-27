@@ -1,5 +1,3 @@
-//http://tinyurl.com/zynadw6
-
 public class MyNode {
 	
 	private int data;
