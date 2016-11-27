@@ -1,0 +1,73 @@
+//Shawn Cummings
+//
+//COSC 311
+//HW 11/28
+//Fall 2016
+
+public class Main {
+
+	public static void main(String[] args) {
+		MyNode queue = new MyNode();
+		int data[] = {1, 7, 3, 4, 5, 6, 1, 2, 3};
+		
+		//insert and sort all data
+		for(int i = 0; i < data.length; i++)
+		{
+			queue.insert(data[i]);
+			System.out.println();
+			queue.print();
+		}
+		
+		//delete and print results
+		queue.delete();
+		System.out.println();
+		queue.print();
+		System.out.println();
+		queue.maxAge();
+		
+		queue.delete();
+		System.out.println();
+		queue.print();
+		System.out.println();
+		queue.maxAge();
+
+		
+		queue.delete();
+		System.out.println();
+		queue.print();
+		System.out.println();
+		queue.maxAge();
+
+		queue.delete();
+		System.out.println();
+		queue.print();
+		System.out.println();
+		queue.maxAge();
+
+		queue.delete();
+		System.out.println();
+		queue.print();
+		System.out.println();
+		queue.maxAge();
+
+		queue.delete();
+		System.out.println();
+		queue.print();
+		System.out.println();
+		queue.maxAge();
+
+		queue.delete();
+		System.out.println();
+		queue.print();
+		System.out.println();
+		queue.maxAge();
+
+		queue.delete();
+		System.out.println();
+		queue.print();	
+		System.out.println();	
+		queue.maxAge();
+		
+	}
+
+}

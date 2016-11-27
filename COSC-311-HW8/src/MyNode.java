@@ -1,0 +1,111 @@
+public class MyNode {
+	
+	private int data;
+	private long ts;
+	private Node max;
+	private Node head;
+	
+	//Constructor
+	public MyNode()
+	{
+		head = null;
+		max = null;
+	}
+	
+	//Create node to be sorted
+	public void insert(int data)
+	{
+		Node temp = new Node();
+		temp.data = data;
+		sort(temp, head);
+	}
+	
+	//Sort node, insert, mark time of insert (Recursive)
+	private void sort(Node node, Node temp)
+	{
+		if(temp == null)
+		{
+			node.ts = System.nanoTime();
+			head = node;
+			return;
+		}
+		
+		//if node is smaller or equal to temp then place it before temp
+		if(node.data < temp.data) 
+		{
+			node.ts = System.nanoTime();
+			node.prev = temp;
+			node.next = temp.next;
+			if(temp.next != null) temp.next.prev = node;
+			temp.next = node;
+			return;
+		}
+		//at the end of list and no spot is found, node must be largest
+		else if(temp.prev == null) 
+		{
+			node.ts = System.nanoTime();
+			temp.prev = node;
+			node.next = temp;
+			node.prev = null;
+			return;
+		}
+		sort(node, temp.prev);
+	}
+	
+	//Delete Node with Highest priority (lowest value)
+	public void delete()
+	{
+		if(head == null)return;
+		
+		head = head.prev;
+		head.next.prev = null;
+		head.next = null;
+	}
+	
+	//Print
+	public void print()
+	{
+		printhelp(head);
+	}
+	
+	//Recursive Print
+	private void printhelp(Node temp)
+	{
+		if(temp.prev == null)
+		{
+			System.out.print("(" + temp.data + ", ts: " + temp.ts + "), " );
+			return;
+		}
+		
+		System.out.print("(" + temp.data + ", ts: " + temp.ts + "), " );
+		printhelp(temp.prev);
+	}
+	
+	//Find Max Age
+	public void maxAge()
+	{
+		max = head;
+		max(head);
+		System.out.println("The oldest element is data = " + max.data + ", with age = " + (System.nanoTime() - max.ts));
+	}
+	
+	//Find oldest node (Recursive)
+	private void max(Node temp)
+	{	
+		if(temp == null) return;
+		
+		if(temp.ts < max.ts) max = temp;
+		
+		if(temp.prev == null) return;
+		
+		max(temp.prev);
+	}
+
+	//Node Class - used in creating linked list
+	private class Node {
+		private int data;
+		private long ts;
+		private Node next;
+		private Node prev;
+	}
+}
