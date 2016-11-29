@@ -18,56 +18,15 @@ public class Main {
 			queue.print();
 		}
 		
-		//delete and print results
-		queue.delete();
-		System.out.println();
-		queue.print();
-		System.out.println();
-		queue.maxAge();
-		
-		queue.delete();
-		System.out.println();
-		queue.print();
-		System.out.println();
-		queue.maxAge();
-
-		
-		queue.delete();
-		System.out.println();
-		queue.print();
-		System.out.println();
-		queue.maxAge();
-
-		queue.delete();
-		System.out.println();
-		queue.print();
-		System.out.println();
-		queue.maxAge();
-
-		queue.delete();
-		System.out.println();
-		queue.print();
-		System.out.println();
-		queue.maxAge();
-
-		queue.delete();
-		System.out.println();
-		queue.print();
-		System.out.println();
-		queue.maxAge();
-
-		queue.delete();
-		System.out.println();
-		queue.print();
-		System.out.println();
-		queue.maxAge();
-
-		queue.delete();
-		System.out.println();
-		queue.print();	
-		System.out.println();	
-		queue.maxAge();
+		//delete and print results		
+		for(int i = 0; i < data.length-1; i++)
+		{
+			queue.delete();
+			System.out.println();
+			queue.print();
+			System.out.println();
+			queue.maxAge();
+		}
 		
 	}
-
 }

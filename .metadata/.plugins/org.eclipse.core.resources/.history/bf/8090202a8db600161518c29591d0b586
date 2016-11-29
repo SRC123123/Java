@@ -33,7 +33,7 @@ public class MyNode {
 		//if node is smaller or equal to temp then place it before temp
 		if(node.data < temp.data) 
 		{
-			node.ts = System.nanoTime(); //mark insert time
+			node.ts = System.nanoTime();
 			node.prev = temp;
 			node.next = temp.next;
 			if(temp.next != null) temp.next.prev = node;
@@ -43,7 +43,7 @@ public class MyNode {
 		//at the end of list and no spot is found, node must be largest
 		else if(temp.prev == null) 
 		{
-			node.ts = System.nanoTime(); //mark insert time
+			node.ts = System.nanoTime();
 			temp.prev = node;
 			node.next = temp;
 			node.prev = null;
