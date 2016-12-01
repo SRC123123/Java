@@ -1,5 +1,5 @@
 //Shawn Cummings
-//URL
+//http://tinyurl.com/gw7x22c
 //COSC 311
 //HW 11/30
 //Fall 2016
