@@ -1,3 +1,9 @@
+//Shawn Cummings
+//http://tinyurl.com/gwpofcb
+//COSC 311
+//HW 12/12
+//Fall 2016
+
 import java.util.Arrays;
 
 public class Main {
