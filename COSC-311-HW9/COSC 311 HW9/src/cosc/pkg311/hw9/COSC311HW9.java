@@ -48,8 +48,7 @@ public class COSC311HW9 {
           
         //Final Print
         for(String s : hashTable)
-            System.out.println(s);
-        
+            System.out.println(s);        
     }
     
     //Insert Method

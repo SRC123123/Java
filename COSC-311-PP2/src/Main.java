@@ -77,7 +77,6 @@ public class Main {
 					cue.insert(i);
 				}			
 				cue.print(); //Print list of all data in queue
-				System.out.println();
 
 				//Delete Data inside the Priority Queue
 				for(int i : temp)
@@ -85,7 +84,7 @@ public class Main {
 					cue.delete();			
 				}
 				cue.print(); //Print max
-				System.out.println();
+				
 			}
 		}
 

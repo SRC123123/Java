@@ -93,7 +93,9 @@ public class PriorityQueue {
 		{
 			System.out.print("(D: " + temp.data + " TS: " + temp.ts + "), ");
 			temp = temp.next;
-		}	
+		}
+		
+		System.out.println();
 	}
 
 	//Private Node Class

@@ -8,7 +8,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		MyNode queue = new MyNode();
-		int data[] = {1, 7, 3, 4, 5, 6, 1, 2, 3};
+		int data[] = {5, 3, 5, 3, 1, 2, 3, 4, 6, 3, 7, 1, 2};
 		
 		//insert and sort all data
 		for(int i = 0; i < data.length; i++)
